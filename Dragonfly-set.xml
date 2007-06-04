@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!--
+-->
+
+<PropertyList>
+    <sim>
+
+        <description>Moyes Dragonfly</description>
+        <aircraft-version>0.2</aircraft-version>
+        <author>Torsten Dreyer</author>
+
+        <flight-model>jsb</flight-model>
+        <aero>Dragonfly-jsbsim</aero>
+        <fuel-fraction>0.8</fuel-fraction>
+        <status>early-production</status>
+
+        <startup>
+          <splash-texture>Aircraft/Dragonfly/Dragonfly-splash.rgb</splash-texture>
+          <splash-title>Dragonfly</splash-title>
+        </startup>
+
+<!--
+  <systems>
+   <electrical>
+    <path>Aircraft/Dragonfly/Dragonfly-electrical.xml</path>
+   </electrical>
+  </systems> 
+-->
+        <sound>
+            <path>Aircraft/Generic/generic-sound.xml</path>
+        </sound>
+
+        <panel>
+            <visibility archive="n">false</visibility>
+        </panel>
+
+        <model>
+            <path archive="y">Aircraft/Dragonfly/Models/Dragonfly.xml</path>
+        </model>
+
+        <view>
+            <internal archive="y">true</internal>
+
+            <config>
+                <x-offset-m archive="y">0.0</x-offset-m>
+                <y-offset-m archive="y">0.85</y-offset-m>
+                <z-offset-m archive="y">-0.23</z-offset-m>
+                <pitch-offset-deg>-3</pitch-offset-deg>
+            </config>
+        </view>
+
+        <help>
+            <title>Moyes Dragonfly</title>
+            <line>Cruise speed: 45 mph</line>
+            <line>Never-exceed (Vne): 66 mph</line>
+            <line>Best Glide (Vglide): 35 mph</line>
+            <line>Maneuvering (Va): 56 mph</line>
+            <line>Approach speed: 35-40 mph</line>
+            <line>Stall speed (Vs): 20 mph (dual: 28 mph)</line>
+        </help>
+
+    </sim>
+
+    <controls>
+        <flight>
+            <aileron-trim>0.00</aileron-trim>
+            <elevator-trim>0.00</elevator-trim>
+            <rudder-trim>0.00</rudder-trim>
+        </flight>
+        <engines>
+            <engine n="0">
+                <magnetos>3</magnetos>
+            </engine>
+        </engines>
+    </controls>
+
+    <engines>
+        <engine>
+            <rpm type="double">1000</rpm>
+        </engine>
+    </engines>
+
+</PropertyList>
