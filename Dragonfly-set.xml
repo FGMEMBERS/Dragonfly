@@ -19,6 +19,11 @@
           <splash-title>Dragonfly</splash-title>
         </startup>
 
+        <panel>
+            <path>Aircraft/Dragonfly/test-panel.xml</path>
+            <visibility>false</visibility>
+        </panel>
+
 <!--
   <systems>
    <electrical>
@@ -45,7 +50,7 @@
                 <x-offset-m archive="y">0.0</x-offset-m>
                 <y-offset-m archive="y">0.85</y-offset-m>
                 <z-offset-m archive="y">-0.23</z-offset-m>
-                <pitch-offset-deg>-3</pitch-offset-deg>
+                <pitch-offset-deg>-12</pitch-offset-deg>
             </config>
         </view>
 
@@ -64,7 +69,7 @@
     <controls>
         <flight>
             <aileron-trim>0.00</aileron-trim>
-            <elevator-trim>0.00</elevator-trim>
+            <elevator-trim>0.025</elevator-trim>
             <rudder-trim>0.00</rudder-trim>
         </flight>
         <engines>

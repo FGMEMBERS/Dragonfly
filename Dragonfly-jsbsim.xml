@@ -5,6 +5,8 @@
     xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
     <!--
     From the POH
+    http://www.moyesamerica.com/forms/DragonflyFlightManual.pdf
+
     Datum is at nose
     
     **** Dimensions ****
@@ -37,12 +39,12 @@
     TOW 430kg  700ft/min@45mph
     
     best glide
-    TOW 340kg 450ft/min@35mph 7:1
-    TOW 430kg 550ft/min@45mph 7.5:1
+    TOW 340kg 450ft/min@35mph       Ca=1.135 Cw=0.164
+    TOW 430kg 550ft/min@45mph       Ca=1.135 Cw=0.158
     
     minimum sink rate
-    TOW 340kg 450ft/min@35mph
-    TOW 430kg 550ft/min@35mph
+    TOW 340kg 450ft/min@35mph       Ca=1.135 Cw=0.164
+    TOW 430kg 550ft/min@35mph       Ca=1.436 Cw=0.256
     
     **** Axis orientation ****
     X points back
@@ -53,8 +55,8 @@
     <fileheader>
         <author>Torsten Dreyer</author>
         <filecreationdate>2006-12-30</filecreationdate>
-        <version> 0.1 </version>
-        <description> Models a Moyes Dragonfly ultralight aircraft</description>
+        <version>0.3</version>
+        <description>Models a Moyes Dragonfly ultralight aircraft</description>
     </fileheader>
 
     <metrics>
@@ -129,9 +131,9 @@
 
         <contact type="BOGEY" name="LEFT_MAIN">
             <location unit="IN">
-                <x>50.000</x>
+                <x>51.969</x>
                 <y>-37.402</y>
-                <z>-10.1</z>
+                <z>-5.906</z>
             </location>
             <static_friction>  0.80 </static_friction>
             <dynamic_friction> 0.50 </dynamic_friction>
@@ -145,9 +147,9 @@
 
         <contact type="BOGEY" name="RIGHT_MAIN">
             <location unit="IN">
-                <x>50.000</x>
+                <x>51.969</x>
                 <y> 37.402</y>
-                <z>-10.1</z>
+                <z>-5.906</z>
             </location>
             <static_friction>  0.80 </static_friction>
             <dynamic_friction> 0.50 </dynamic_friction>
@@ -163,12 +165,12 @@
             <location unit="IN">
                 <x>195.984</x>
                 <y>0.00</y>
-                <z>4.724</z>
+                <z>-1.73</z>
             </location>
             <static_friction>  0.80 </static_friction>
             <dynamic_friction> 0.50 </dynamic_friction>
             <rolling_friction> 0.02 </rolling_friction>
-            <spring_coeff unit="LBS/FT">2000.00</spring_coeff>
+            <spring_coeff unit="LBS/FT">9000.00</spring_coeff>
             <damping_coeff unit="LBS/FT/SEC">100.00</damping_coeff>
             <max_steer unit="DEG">-15.00</max_steer>
             <brake_group>NONE</brake_group>
@@ -199,13 +201,23 @@
             <damping_coeff unit="LBS/FT/SEC">200.00</damping_coeff>
         </contact>
 
-        <!-- todo: add contact point for nose and tail/top -->
+        <contact type="STRUCTURE" name="NOSE">
+            <location unit="IN">
+                <x>0</x>
+                <y>0</y>
+                <z>8.85</z>
+            </location>
+            <static_friction>0.80</static_friction>
+            <dynamic_friction>0.50</dynamic_friction>
+            <spring_coeff unit="LBS/FT">1000.00</spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC">200.00</damping_coeff>
+        </contact>
 
     </ground_reactions>
 
     <propulsion>
 
-        <engine file="eng_io320">
+        <engine file="Rotax582">
             <location unit="IN">
                 <x>124.488</x>
                 <y>0.00</y>
@@ -219,7 +231,7 @@
             </orient>
             <feed>0</feed>
 
-            <thruster file="prop_75in2f">
+            <thruster file="Neuform.tr3-73-25,4-100">
 
                 <location unit="IN">
                     <x>124.488</x>
@@ -340,8 +352,8 @@
                         <independentVar lookup="row">aero/alpha-deg</independentVar>
                         <tableData>
                             -15.0   -2.0
-                            19.0    4.0
-                            23.0    0.0
+                            15.0    4.0
+                            19.0    0.0
                         </tableData>
                     </table>
                 </product>
@@ -369,9 +381,11 @@
                     <table>
                         <independentVar lookup="row">aero/alpha-deg</independentVar>
                         <tableData>
-                            -15.0   0.1
-                            19.0    0.5
-                            23.0    0.7
+                            -15.0   0.3
+                            1.0     0.1
+                            15.0    0.5
+                            19.0    1.0
+                            23.0    3.0
                         </tableData>
                     </table>
                 </product>
@@ -387,7 +401,6 @@
                 </product>
             </function>
 -->
-            <!--
             <function name="aero/coefficient/CDbeta">
                 <description>Drag_due_to_sideslip</description>
                 <product>
@@ -405,7 +418,6 @@
                     </table>
                 </product>
             </function>
-            -->
 
             <function name="aero/coefficient/CDde">
                 <description>Drag_due_to_Elevator_Deflection</description>
@@ -477,13 +489,7 @@
                     <property>metrics/Sw-sqft</property>
                     <property>metrics/bw-ft</property>
                     <property>fcs/left-aileron-pos-rad</property>
-                    <table>
-                        <independentVar lookup="row">velocities/mach</independentVar>
-                        <tableData>
-              0.0    0.170
-              2.0    0.057
-            </tableData>
-                    </table>
+                    <value>0.170</value>
                 </product>
             </function>
 
@@ -509,7 +515,7 @@
                     <property>metrics/Sw-sqft</property>
                     <property>metrics/cbarw-ft</property>
                     <property>aero/alpha-rad</property>
-                    <value>-0.5</value>
+                    <value>-1.5</value>
                 </product>
             </function>
 
@@ -520,13 +526,7 @@
                     <property>metrics/Sw-sqft</property>
                     <property>metrics/cbarw-ft</property>
                     <property>fcs/elevator-pos-rad</property>
-                    <table>
-                        <independentVar lookup="row">velocities/mach</independentVar>
-                        <tableData>
-              0.0     -1.100
-              2.0     -0.275
-                        </tableData>
-                    </table>
+                    <value>-2.9000</value>
                 </product>
             </function>
 

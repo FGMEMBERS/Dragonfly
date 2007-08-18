@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<!--
+-->
+
+<PropertyList>
+
+    <name>DragonFly-Testpanel</name>
+    <background>Aircraft/Instruments/Textures/transparent-bg.rgb</background>
+    <w>1024</w>
+    <h>0</h>
+    <instruments>
+        <instrument include="../Instruments/digitalmultimeter-x.4.xml">
+            <name>advanceration</name>
+            <params>
+                <value>/velocities/airspeed-kt</value>
+            </params>
+            <x>900</x>
+            <y>700</y>
+            <w>250</w>
+            <h>100</h>
+        </instrument>
+
+        <instrument include="../Instruments/digitalmultimeter-x.4.xml">
+            <name>advanceration</name>
+            <params>
+                <value>/fdm/jsbsim/aero/alpha-deg</value>
+            </params>
+            <x>0</x>
+            <y>700</y>
+            <w>250</w>
+            <h>100</h>
+        </instrument>
+        <instrument include="../Instruments/digitalmultimeter-x.4.xml">
+            <name>advanceration</name>
+            <params>
+                <value>/fdm/jsbsim/atmosphere/rho-slugs_ft3</value>
+            </params>
+            <x>0</x>
+            <y>650</y>
+            <w>250</w>
+            <h>100</h>
+        </instrument>
+
+        <instrument include="../Instruments/digitalmultimeter-x.4.xml">
+            <name>advanceration</name>
+            <params>
+                <value>/engines/engine[0]/rpm</value>
+            </params>
+            <x>0</x>
+            <y>550</y>
+            <w>250</w>
+            <h>100</h>
+        </instrument>
+        <instrument include="../Instruments/digitalmultimeter-x.4.xml">
+            <name>advanceration</name>
+            <params>
+                <value>/engines/engine[0]/thruster/rpm</value>
+            </params>
+            <x>100</x>
+            <y>550</y>
+            <w>250</w>
+            <h>100</h>
+        </instrument>
+
+        <instrument include="../Instruments/digitalmultimeter-x.4.xml">
+            <name>advanceration</name>
+            <params>
+                <value>/engines/engine[0]/thrust_lb</value>
+            </params>
+            <x>0</x>
+            <y>500</y>
+            <w>250</w>
+            <h>100</h>
+        </instrument>
+        <instrument include="../Instruments/digitalmultimeter-x.4.xml">
+            <name>advanceration</name>
+            <params>
+                <value>/engines/engine[0]/thruster/torque</value>
+            </params>
+            <x>100</x>
+            <y>500</y>
+            <w>250</w>
+            <h>100</h>
+        </instrument>
+
+        <instrument include="../Instruments/digitalmultimeter-x.4.xml">
+            <name>advanceration</name>
+            <params>
+                <value>/fdm/jsbsim/propulsion/engine[0]/advance-ratio</value>
+            </params>
+            <x>0</x>
+            <y>100</y>
+            <w>250</w>
+            <h>100</h>
+        </instrument>
+        <instrument include="../Instruments/digitalmultimeter-x.4.xml">
+            <name>advanceration</name>
+            <params>
+                <value>/fdm/jsbsim/propulsion/engine[0]/blade-angle</value>
+            </params>
+            <x>0</x>
+            <y>50</y>
+            <w>250</w>
+            <h>100</h>
+        </instrument>
+        <instrument include="../Instruments/digitalmultimeter-x.4.xml">
+            <name>advanceration</name>
+            <params>
+                <value>/fdm/jsbsim/propulsion/engine[0]/thrust-coefficient</value>
+            </params>
+            <x>0</x>
+            <y>0</y>
+            <w>250</w>
+            <h>100</h>
+        </instrument>
+    </instruments>
+</PropertyList>

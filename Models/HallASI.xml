@@ -11,7 +11,7 @@
     <animation>
         <type>translate</type>
         <object-name>Indicator</object-name>
-        <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+        <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
         <axis>
             <x>0.0</x>
             <y>0.0</y>
@@ -30,6 +30,27 @@
             
     </animation>
     
+    <animation>
+      <type>range</type>
+      <object-name>Axle</object-name>
+      <min-m>0</min-m>
+      <max-m>2</max-m>
+    </animation>
+
+    <animation>
+      <type>range</type>
+      <object-name>Tube</object-name>
+      <min-m>0</min-m>
+      <max-m>5</max-m>
+    </animation>
+
+    <animation>
+      <type>range</type>
+      <object-name>Indicator</object-name>
+      <min-m>0</min-m>
+      <max-m>10</max-m>
+    </animation>
+
     
 </PropertyList>
 
