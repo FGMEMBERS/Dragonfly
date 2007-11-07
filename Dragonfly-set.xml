@@ -6,7 +6,7 @@
     <sim>
 
         <description>Moyes Dragonfly</description>
-        <aircraft-version>0.2</aircraft-version>
+        <aircraft-version>0.4</aircraft-version>
         <author>Torsten Dreyer</author>
 
         <flight-model>jsb</flight-model>
@@ -24,13 +24,11 @@
             <visibility>false</visibility>
         </panel>
 
-<!--
-  <systems>
-   <electrical>
-    <path>Aircraft/Dragonfly/Dragonfly-electrical.xml</path>
-   </electrical>
-  </systems> 
--->
+        <submodels>
+          <serviceable type="bool">true</serviceable>
+          <path>Aircraft/Dragonfly/Models/Dragonfly-submodels.xml</path>
+        </submodels>
+
         <sound>
             <path>Aircraft/Generic/generic-sound.xml</path>
         </sound>
@@ -41,6 +39,7 @@
 
         <model>
             <path archive="y">Aircraft/Dragonfly/Models/Dragonfly.xml</path>
+            <banner-on-hook type="bool">false</banner-on-hook>
         </model>
 
         <view>
@@ -66,6 +65,12 @@
 
     </sim>
 
+    <nasal>
+      <Dragonfly>
+        <file>Aircraft/Dragonfly/Nasal/Banner.nas</file>
+      </Dragonfly>
+    </nasal>
+
     <controls>
         <flight>
             <aileron-trim>0.00</aileron-trim>
@@ -77,7 +82,22 @@
                 <magnetos>3</magnetos>
             </engine>
         </engines>
+        <banner-release type="bool">false</banner-release>
     </controls>
+    <input>
+      <keyboard>
+        <key n="111">
+          <name>o</name>
+          <desc>release banner</desc>
+          <binding>
+            <command>property-assign</command>
+            <property>controls/banner-release</property>
+            <value type="bool">true</value>
+          </binding>
+        </key>
+      </keyboard>
+    </input>
+
 
     <engines>
         <engine>

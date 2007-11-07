@@ -55,7 +55,7 @@
     <fileheader>
         <author>Torsten Dreyer</author>
         <filecreationdate>2006-12-30</filecreationdate>
-        <version>0.3</version>
+        <version>0.4</version>
         <description>Models a Moyes Dragonfly ultralight aircraft</description>
     </fileheader>
 
@@ -337,6 +337,23 @@
 
         </channel>
 
+        <channel name="Banner-On-Hook">
+            <kinematic name="CowlFlaps Control">
+                <input>fcs/speedbrake-cmd-norm</input>
+                <traverse>
+                    <setting>
+                        <position>0</position>
+                        <time>0</time>
+                    </setting>
+                    <setting>
+                        <position>1</position>
+                        <time>2</time>
+                    </setting>
+                </traverse>
+                <output>fcs/speedbrake-pos-norm</output>
+            </kinematic>
+        </channel>
+
     </flight_control>
 
     <aerodynamics>
@@ -425,9 +442,20 @@
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
                     <property>fcs/elevator-pos-norm</property>
-                    <value>0.04</value>
+                    <value>1.00</value>
                 </product>
             </function>
+
+            <function name="aero/coefficient/CDbanner">
+                <description>Drag_due_to_banner</description>
+                <product>
+                    <property>aero/qbar-psf</property>
+                    <property>metrics/Sw-sqft</property>
+                    <property>fcs/speedbrake-pos-norm</property>
+                    <value>0.1</value>
+                </product>
+            </function>
+
 
         </axis>
 
