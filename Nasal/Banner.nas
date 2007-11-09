@@ -64,6 +64,11 @@ BannerMgr.new = func {
 }
 
 BannerMgr.addBanner = func {
+  var elev_m = geo.elevation(arg[1], arg[2]);
+  if( elev_m == nil ) {
+    print("can't get elevation for " ~ arg[1] ~ "/" ~ arg[2] ~ " - groundbanner ignored" );
+    return;
+  }
   var banner = GroundBanner.new( geo._put_model( arg[0], arg[1], arg[2], nil, arg[3] ) );
   append( me.banners, banner );
 }
