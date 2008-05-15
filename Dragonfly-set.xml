@@ -42,9 +42,8 @@
             <banner-on-hook type="bool">false</banner-on-hook>
         </model>
 
-        <view>
+        <view n="0">
             <internal archive="y">true</internal>
-
             <config>
                 <x-offset-m archive="y">0.0</x-offset-m>
                 <y-offset-m archive="y">0.85</y-offset-m>
@@ -53,14 +52,35 @@
             </config>
         </view>
 
+        <view n="100">
+          <name>Back Seat View</name>
+          <type>lookfrom</type>
+          <internal archive="y">true</internal>
+          <config>
+            <from-model type="bool">true</from-model>
+            <from-model-idx type="int">0</from-model-idx>
+            <ground-level-nearplane-m type="double">0.05</ground-level-nearplane-m>
+            <default-field-of-view-deg type="double">55</default-field-of-view-deg>
+            <pitch-offset-deg>-12</pitch-offset-deg>
+            <x-offset-m archive="y">0.0</x-offset-m>
+            <y-offset-m archive="y">0.85</y-offset-m>
+            <z-offset-m archive="y">1.10</z-offset-m>
+          </config>
+        </view>
+
+
         <help>
             <title>Moyes Dragonfly</title>
-            <line>Cruise speed: 45 mph</line>
-            <line>Never-exceed (Vne): 66 mph</line>
+            <line>- Speeds ----------------------------------------------------------------</line>
+            <line>Cruise speed:        45 mph</line>
+            <line>Never-exceed (Vne):  66 mph</line>
             <line>Best Glide (Vglide): 35 mph</line>
-            <line>Maneuvering (Va): 56 mph</line>
-            <line>Approach speed: 35-40 mph</line>
-            <line>Stall speed (Vs): 20 mph (dual: 28 mph)</line>
+            <line>Maneuvering (Va):    56 mph</line>
+            <line>Approach speed:      35-40 mph</line>
+            <line>Stall speed (Vs):    20 mph (dual: 28 mph)</line>
+            <line>- Banner towing ---------------------------------------------------------</line>
+            <line>Read http://wiki.flightgear.org/flightgear_wiki/index.php?title=Dragonfly</line>
+            <line>After banner pickup, release the banner at any time hitting 'o'</line>
         </help>
 
     </sim>
