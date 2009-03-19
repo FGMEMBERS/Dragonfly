@@ -18,6 +18,16 @@
         </offsets>
     </model>
 
+    <animation>
+      <type>noshadow</type>
+      <object-name>Banner</object-name>
+      <condition>
+        <not>
+          <property>sim/model/banner-on-hook</property>
+        </not>
+      </condition>
+    </animation>
+
     <model>
         <path>Aircraft/Instruments-3d/alt/alt.xml</path>
         <name>Altimeter</name>

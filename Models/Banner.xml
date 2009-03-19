@@ -5,10 +5,6 @@
     <path>Banner.ac</path>
     
     <animation>
-        <type>noshadow</type>
-    </animation>
-    
-    <animation>
       <type>range</type>
       <min-m>0</min-m>
       <max-m>2000</max-m>
