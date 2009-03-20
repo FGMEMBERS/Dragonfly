@@ -4,6 +4,7 @@
     2 Takt 2 Zylinder
     48 kW / 65 PS
     580.7 ccm3
+    20.5l/h at 75% -> 32.472lbs/h -> 0.664lbs/h/hp
 -->
 <piston_engine name="Rotax582">
   <minmp unit="INHG">          2.1 </minmp>
@@ -12,7 +13,10 @@
   <maxhp>65.00</maxhp>
   <cycles>2.0</cycles>
   <idlerpm>1600.0</idlerpm>
+  <maxrpm>6500</maxrpm>
   <maxthrottle>1.0</maxthrottle>
-  <minthrottle>0.2</minthrottle>
+  <minthrottle>0.1</minthrottle>
+  <bsfc>0.664</bsfc>
+  <volumetric-efficiency>0.82</volumetric-efficiency>
 </piston_engine>
 
