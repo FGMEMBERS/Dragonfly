@@ -1,7 +1,7 @@
 ##############################################################################
-AircraftBanner = {};
+var AircraftBanner = {};
 AircraftBanner.new = func {
-  obj = {};
+  var obj = {};
   obj.parents = [AircraftBanner];
   obj.onHookNode = props.globals.getNode( "sim/model/banner-on-hook", 1 );
   obj.speedbrakeNode = props.globals.getNode( "controls/flight/speedbrake" );
@@ -29,9 +29,9 @@ AircraftBanner.hook = func {
 }
 
 ##############################################################################
-GroundBanner = {};
+var GroundBanner = {};
 GroundBanner.new = func {
-  obj = {};
+  var obj = {};
   obj.parents = [GroundBanner];
   obj.modelNode = arg[0];
   obj.hooked = 0;
@@ -45,9 +45,9 @@ GroundBanner.hook = func {
 
 
 ##############################################################################
-BannerMgr = {};
+var BannerMgr = {};
 BannerMgr.new = func {
-  obj = {};
+  var obj = {};
   obj.parents = [BannerMgr];
 
   obj.aircraftBanner = arg[0];
@@ -120,7 +120,7 @@ BannerMgr.timer = func {
 var bannerMgr = nil;
 var aircraftBanner = nil;
 
-init_banner = func {
+var init_banner = func {
   aircraftBanner = AircraftBanner.new();
   bannerMgr = BannerMgr.new( aircraftBanner );
   fgcommand("loadxml", props.Node.new({
