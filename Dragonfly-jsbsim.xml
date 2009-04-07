@@ -62,7 +62,7 @@
     <metrics>
         <wingarea unit="M2">17.02</wingarea>
         <wingspan unit="M">10.39</wingspan>
-        <wing_incidence>2.25</wing_incidence>
+        <wing_incidence unit="DEG">10.75</wing_incidence>
         <chord unit="M">1.638</chord>
         <htailarea unit="M2">1.479</htailarea>
         <htailarm unit="M">3.656</htailarm>
@@ -375,7 +375,7 @@
                     </table>
                 </product>
             </function>
-
+<!--
             <function name="aero/coefficient/CLde">
                 <description>Lift_due_to_Elevator_Deflection</description>
                 <product>
@@ -385,7 +385,7 @@
                     <value>0.2</value>
                 </product>
             </function>
-
+-->
         </axis>
 
         <axis name="DRAG">
@@ -442,7 +442,7 @@
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
                     <abs><property>fcs/elevator-pos-norm</property></abs>
-                    <value>1.00</value>
+                    <value>0.05</value>
                 </product>
             </function>
 
