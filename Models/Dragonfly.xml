@@ -51,6 +51,17 @@
     </model>
 
     <model>
+        <path>Aircraft/Dragonfly/Models/RPM.xml</path>
+        <name>RPM</name>
+        <offsets>
+            <x-m>-0.853907</x-m>
+            <y-m>0.063903</y-m>
+            <z-m>0.618526</z-m>
+            <pitch-deg>-15</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
         <path>Aircraft/Dragonfly/Models/HallASI.xml</path>
         <name>AirspeedIndicator</name>
         <offsets>
