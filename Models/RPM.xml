@@ -4,7 +4,7 @@
     <rpm>engines/engine[0]/rpm</rpm>
   </params>
 
-  <path>RPM.ac</path>
+  <path>Gauge60mm.ac</path>
 
   <animation>
     <type>rotate</type>
@@ -14,6 +14,12 @@
     <axis>
       <x>1</x>
     </axis>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Face</object-name>
+    <texture>RPM.rgb</texture>
   </animation>
 
 </PropertyList>

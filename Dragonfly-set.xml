@@ -6,23 +6,25 @@
     <sim>
 
         <description>Moyes Dragonfly</description>
-        <aircraft-version>0.4</aircraft-version>
+        <aircraft-version>1.0</aircraft-version>
         <author>Torsten Dreyer</author>
 
         <flight-model>jsb</flight-model>
         <aero>Dragonfly-jsbsim</aero>
         <fuel-fraction>0.8</fuel-fraction>
-        <status>early-production</status>
+        <status>production</status>
 
         <startup>
           <splash-texture>Aircraft/Dragonfly/Dragonfly-splash.rgb</splash-texture>
           <splash-title>Dragonfly</splash-title>
         </startup>
 
+<!--
         <panel>
             <path>Aircraft/Dragonfly/test-panel.xml</path>
             <visibility>false</visibility>
         </panel>
+-->
 
         <submodels>
           <serviceable type="bool">true</serviceable>
@@ -49,6 +51,36 @@
                 <y-offset-m archive="y">0.85</y-offset-m>
                 <z-offset-m archive="y">-0.23</z-offset-m>
                 <pitch-offset-deg>-12</pitch-offset-deg>
+            </config>
+        </view>
+        <view n="1">
+            <config>
+              <target-y-offset-m>1.0</target-y-offset-m>
+              <target-z-offset-m>1.5</target-z-offset-m>
+            </config>
+        </view>
+        <view n="2">
+            <config>
+              <target-y-offset-m>1.0</target-y-offset-m>
+              <target-z-offset-m>1.5</target-z-offset-m>
+            </config>
+        </view>
+        <view n="3">
+            <config>
+              <target-y-offset-m>1.0</target-y-offset-m>
+              <target-z-offset-m>1.5</target-z-offset-m>
+            </config>
+        </view>
+        <view n="5">
+            <config>
+              <target-y-offset-m>1.0</target-y-offset-m>
+              <target-z-offset-m>1.5</target-z-offset-m>
+            </config>
+        </view>
+        <view n="6">
+            <config>
+              <target-y-offset-m>1.0</target-y-offset-m>
+              <target-z-offset-m>1.5</target-z-offset-m>
             </config>
         </view>
 
@@ -125,4 +157,27 @@
         </engine>
     </engines>
 
+   <payload>
+      <weight>
+        <name type="string">Pilot</name>
+        <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]"/>
+        <min-lb type="double">0.0</min-lb>
+        <max-lb type="double">240.0</max-lb>
+      </weight>
+      <weight>
+        <name type="string">Co Pilot</name>
+        <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]"/>
+        <min-lb type="double">0.0</min-lb>
+        <max-lb type="double">240.0</max-lb>
+      </weight>
+   </payload>
+   <instrumentation>
+     <airspeed-indicator>
+       <texture>Airspeed-kmh.rgb</texture>
+<!--
+       <texture>Airspeed-mph.rgb</texture>
+       <texture>Airspeed-kts.rgb</texture>
+-->
+     </airspeed-indicator>
+   </instrumentation>
 </PropertyList>
