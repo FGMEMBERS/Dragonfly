@@ -62,7 +62,7 @@
     <metrics>
         <wingarea unit="M2">17.02</wingarea>
         <wingspan unit="M">10.39</wingspan>
-        <wing_incidence unit="DEG">10.75</wing_incidence>
+        <wing_incidence unit="DEG">13.0</wing_incidence>
         <chord unit="M">1.638</chord>
         <htailarea unit="M2">1.479</htailarea>
         <htailarm unit="M">3.656</htailarm>
@@ -543,7 +543,7 @@
                     <property>metrics/Sw-sqft</property>
                     <property>metrics/cbarw-ft</property>
                     <property>aero/alpha-rad</property>
-                    <value>-1.5</value>
+                    <value>-3.2</value>
                 </product>
             </function>
 
@@ -554,7 +554,7 @@
                     <property>metrics/Sw-sqft</property>
                     <property>metrics/cbarw-ft</property>
                     <property>fcs/elevator-pos-rad</property>
-                    <value>-2.9000</value>
+                    <value>-2.3000</value>
                 </product>
             </function>
 
