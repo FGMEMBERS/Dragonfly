@@ -19,13 +19,6 @@
           <splash-title>Dragonfly</splash-title>
         </startup>
 
-<!--
-        <panel>
-            <path>Aircraft/Dragonfly/test-panel.xml</path>
-            <visibility>false</visibility>
-        </panel>
--->
-
         <submodels>
           <serviceable type="bool">true</serviceable>
           <path>Aircraft/Dragonfly/Models/Dragonfly-submodels.xml</path>
