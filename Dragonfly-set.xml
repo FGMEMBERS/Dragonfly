@@ -173,10 +173,10 @@
    </payload>
    <instrumentation>
      <airspeed-indicator>
-       <texture>Airspeed-kmh.rgb</texture>
+       <texture>Airspeed-mph.png</texture>
 <!--
-       <texture>Airspeed-mph.rgb</texture>
-       <texture>Airspeed-kts.rgb</texture>
+       <texture>Airspeed-kmh.png</texture>
+       <texture>Airspeed-kts.png</texture>
 -->
      </airspeed-indicator>
    </instrumentation>
