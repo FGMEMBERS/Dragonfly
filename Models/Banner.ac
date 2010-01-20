@@ -6,7 +6,7 @@ kids 1
 OBJECT poly
 name "rect"
 loc -3.71658 0 -2.18861e-07
-texture "banner.rgb"
+texture "banner.png"
 crease 45.000000
 numvert 12
 8.18463 0 2.18861e-07

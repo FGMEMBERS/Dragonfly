@@ -25,7 +25,7 @@ kids 0
 OBJECT poly
 name "Face"
 loc 0.00095 7.45058e-09 7.45058e-09
-texture "RPM.rgb"
+texture "RPM.png"
 crease 45.000000
 numvert 216
 -0.00085 0.0264784 -0.00466883

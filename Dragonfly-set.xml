@@ -15,7 +15,7 @@
         <status>production</status>
 
         <startup>
-          <splash-texture>Aircraft/Dragonfly/Dragonfly-splash.rgb</splash-texture>
+          <splash-texture>Aircraft/Dragonfly/Dragonfly-splash.png</splash-texture>
           <splash-title>Dragonfly</splash-title>
         </startup>
 

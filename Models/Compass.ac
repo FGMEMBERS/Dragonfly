@@ -8,7 +8,7 @@ kids 2
 OBJECT poly
 name "Ring"
 loc 0.0134861 -0.011732 -0.0354782
-texture "comp.rgb"
+texture "comp.png"
 crease 45.000000
 numvert 49
 0.0204849 0.0220889 0.0292681

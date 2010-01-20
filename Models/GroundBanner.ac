@@ -321,7 +321,7 @@ kids 0
 OBJECT poly
 name "Banner"
 loc 4.67501 1.005 -7.1031e-09
-texture "banner.rgb"
+texture "banner.png"
 crease 45.000000
 numvert 12
 -4.67501 -0.561602 1.29327
