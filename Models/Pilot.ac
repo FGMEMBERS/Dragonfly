@@ -6,7 +6,7 @@ OBJECT poly
 name "pilot"
 data 8
 Mesh.200
-texture "/home/torsten/FlightGear/data/Aircraft/Aerostar-700/Models/pilot.rgb"
+texture "pilot.png"
 crease 50.000000
 numvert 407
 0.104094 0.573285 0.254747
